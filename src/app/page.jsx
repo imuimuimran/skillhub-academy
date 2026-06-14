@@ -1,13 +1,37 @@
-import AuthTest from "@/components/AuthTest";
+import HeroSection from "@/components/sections/HeroSection";
+import FeaturedCourses from "@/components/sections/FeaturedCourses";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
+import CategoriesSection from "@/components/sections/CategoriesSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import StatsSection from "@/components/sections/StatsSection";
+import CTASection from "@/components/sections/CTASection";
 
 export default function Home() {
   return (
-    <main>
-      {/* <AuthTest /> */}
-      Home Page
-    </main>
+    <>
+      <HeroSection />
+      <FeaturedCourses />
+      <WhyChooseUs />
+      <CategoriesSection />
+      <TestimonialsSection />
+      <StatsSection />
+      <CTASection />
+    </>
   );
 }
+
+
+
+// import AuthTest from "@/components/AuthTest";
+
+// export default function Home() {
+//   return (
+//     <main>
+//       {/* <AuthTest /> */}
+//       Home Page
+//     </main>
+//   );
+// }
 
 // export default function Home() {
 //   return (
