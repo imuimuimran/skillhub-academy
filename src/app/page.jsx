@@ -3,7 +3,8 @@ import AuthTest from "@/components/AuthTest";
 export default function Home() {
   return (
     <main>
-      <AuthTest />
+      {/* <AuthTest /> */}
+      Home Page
     </main>
   );
 }
