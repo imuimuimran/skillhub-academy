@@ -12,6 +12,8 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] =
     useState(false);
 
+  
+
   const handleLogout = async () => {
     try {
       await logoutUser();
@@ -29,6 +31,7 @@ export default function Navbar() {
       <Link href="/about">About</Link>
     </>
   );
+  
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
