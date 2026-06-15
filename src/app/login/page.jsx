@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams, } from "next/navigation";
 
 import toast from "react-hot-toast";
 
@@ -22,12 +22,21 @@ export default function LoginPage() {
   const [loading, setLoading] =
     useState(false);
 
+  const searchParams =
+      useSearchParams();
+
+    const redirectPath =
+      searchParams.get(
+        "redirect"
+      ) || "/";
+
   const handleLogin = async (e) => {
     e.preventDefault();
 
     const form = e.target;
 
     const email = form.email.value;
+    
     const password =
       form.password.value;
 
@@ -43,7 +52,7 @@ export default function LoginPage() {
         "Login successful!"
       );
 
-      router.push("/");
+      router.push(redirectPath);
     } catch (error) {
       if (
         error.code ===
@@ -73,7 +82,7 @@ export default function LoginPage() {
           "Google Login Successful!"
         );
 
-        router.push("/");
+        router.push(redirectPath);
       } catch (error) {
         if (
           error.code ===
