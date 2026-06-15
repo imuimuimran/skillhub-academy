@@ -19,6 +19,8 @@ import {
 
 import { auth } from "@/firebase/firebase.config";
 
+import { reload } from "firebase/auth";
+
 const AuthContext = createContext();
 
 const googleProvider = new GoogleAuthProvider();
