@@ -24,11 +24,17 @@ export default function Navbar() {
 
   const navLinks = (
     <>
-      <Link href="/">Home</Link>
+      <Link href="/" onClick={() =>
+    setMenuOpen(false)
+  }>Home</Link>
 
-      <Link href="/items">Courses</Link>
+      <Link href="/items" onClick={() =>
+    setMenuOpen(false)
+  }>Courses</Link>
 
-      <Link href="/about">About</Link>
+      <Link href="/about" onClick={() =>
+    setMenuOpen(false)
+  }>About</Link>
     </>
   );
   
