@@ -66,7 +66,7 @@ export default function RegisterPage() {
         photo
       );
 
-      await reload(auth.currentUser);
+      // await reload(auth.currentUser);
 
       toast.success(
         "Registration successful!"
